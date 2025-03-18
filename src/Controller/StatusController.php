@@ -16,5 +16,4 @@ class StatusController
             'app' => true
         ]);
     }
-
 }
