@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CDP\Http;
+namespace App\Cdp\Http;
 
 use App\CDP\Analytics\Model\ModelInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -15,8 +15,7 @@ class CdpClient
     public function __construct(
         private HttpClientInterface $httpClient,
         #[Autowire('%cdp.api_key%')] private string $apiKey
-    )
-    {
+    ) {
     }
 
     public function track(ModelInterface $model): void
